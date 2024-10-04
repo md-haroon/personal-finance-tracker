@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #007b3f;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-areas:
+      "header header"
+      "aside main"
+      "aside footer";
+  grid-template-rows: 10vh 1fr 0.01fr;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background: transparent;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  grid-area: nav;
+  background: transparent;
+  padding: 10px;
+  color: white;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+main {
+  grid-area: main;
+  padding: 10px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Links in the navigation */
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  background-color: #575757;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

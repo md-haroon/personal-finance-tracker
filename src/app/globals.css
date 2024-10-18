@@ -3,21 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #fff;
-  --foreground: #007b3f;
+  --background: #F9F9F8;
+  --foreground: #000;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-geist-sans);
   display: grid;
   grid-template-areas:
       "header header"
       "aside main"
       "aside footer";
-  grid-template-rows: 10vh 1fr 0.01fr;
-  grid-template-columns: 200px 1fr;
+  grid-template-rows: 8vh 1fr 0.01fr;
+  grid-template-columns: 400px 1fr;
   height: 100vh;
 }
 
@@ -38,26 +39,37 @@ nav {
 
 aside {
   grid-area: aside;
-  background-color: #f4f4f4;
   padding: 10px;
+  border-top-right-radius: 2.5rem;
 }
 
 main {
   grid-area: main;
-  padding: 10px;
+  padding: 50px;
+  background: #fff;
+  border-radius: 40px;
+  /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 footer {
   grid-area: footer;
-  background-color: #333;
   padding: 10px;
   text-align: center;
-  color: white;
+  color: var(--foreground);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #344767;
 }
 
 /* Links in the navigation */
 nav a {
-  color: white;
+  color: #67748e;
   text-decoration: none;
   display: block;
   padding: 5px 0;
@@ -71,4 +83,19 @@ nav a:hover {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+
+.card {
+  /* @apply p-8 bg-gray-300 outline outline-2 outline-gray-500 mx-3 my-6 */
+  @apply bg-slate-50 text-white p-6 shadow-lg flex items-center space-x-4 my-4
+}
+
+.card.first{
+  @apply  rounded-t-lg
+}
+
+.card.last{
+  @apply  rounded-b-lg
 }

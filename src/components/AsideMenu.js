@@ -30,11 +30,8 @@ const cardList = [
 export default function AsideMenu() {
     return (
         <aside>
-            <h3>Sidebar</h3>
-            <p>This is some sidebar content. You can put links or any information here.</p>
             {
                 cardList.map((card,index) => {
-                    console.log(index)
                     const position = (index === 0) ? "first" : (index === cardList.length - 1) ? "last" : "";
                     return (
                         <div key={index} className={`card ${position}`}>
@@ -43,8 +40,8 @@ export default function AsideMenu() {
                             </div>
                             <div>
                                 <h2 className="font-bold uppercase text-lg">{card.type}</h2>
-                                <p className="text-sm text-black">Budget: <span className="font-semibold">$3,500</span></p>
-                                <p className="text-sm">Stage: <span className="font-semibold">Milestone 2</span></p>
+                                <p className="text-sm text-slate-500">Budget: <span className="font-semibold">SGD {card.budget}</span></p>
+                                <p className="text-sm text-black">Spend: <span className="font-semibold">{card.spend}</span></p>
                             </div>
                         </div>
                     );

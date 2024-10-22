@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer>
-            <p>Footer Information &copy; 2024</p>
+            <p>Developed By HAROON JABARULLA &copy; 2024</p>
         </footer>
     );
 }

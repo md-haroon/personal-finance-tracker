@@ -27,14 +27,13 @@ header {
   background: transparent;
   padding: 10px;
   text-align: center;
-  color: white;
+  
 }
 
 nav {
   grid-area: nav;
   background: transparent;
   padding: 10px;
-  color: white;
 }
 
 aside {
@@ -58,25 +57,32 @@ footer {
   text-align: center;
   color: var(--foreground);
 }
+.logo-img {
+  min-width: 100px;
+  /* background: linear-gradient(15deg, #FF8C00, #FFD700); */
+}
+.logo-container{
+  height: 100%;
+  @apply flex
+}
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-weight: 400;
-  line-height: 1.2;
-  color: #344767;
+.logo-text {
+  color: #1d3731;
+  font-size: 20px;
+  font-weight: bold;
+  @apply flex-1 h-full
 }
 
 /* Links in the navigation */
-nav a {
-  color: #67748e;
+nav li {
   text-decoration: none;
   display: block;
   padding: 5px 0;
+  min-width: 110px;
 }
 
 nav a:hover {
-  background-color: #575757;
+  color: #e0e0e0;
 }
 
 @layer utilities {
@@ -85,11 +91,9 @@ nav a:hover {
   }
 }
 
-
-
 .card {
   /* @apply p-8 bg-gray-300 outline outline-2 outline-gray-500 mx-3 my-6 */
-  @apply bg-slate-50 text-white p-6 shadow-lg flex items-center space-x-4 my-4
+  @apply bg-slate-50 p-6 shadow-lg flex items-center space-x-4 my-4
 }
 
 .card.first{

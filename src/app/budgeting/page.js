@@ -1,7 +1,9 @@
 export default function budgetingPage(params) {
     return(
         <>
-            <h1>Budgeting Page</h1>
+            <div className="expence-container">
+
+            </div>
         </>
     )
 }

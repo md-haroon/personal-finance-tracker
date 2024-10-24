@@ -1,0 +1,22 @@
+
+.expence-container{
+    @apply flex flex-row h-full;
+}
+
+.form-section{
+    min-width: 300px;
+    @apply flex flex-col w-1/4 h-full border border-slate-300;
+}
+
+.details-section{
+    @apply flex flex-col w-3/4 h-full;
+}
+
+.sumary-cards{
+    @apply border border-slate-300;
+    height: 123px
+}
+
+.expence-details{
+    @apply border border-slate-300 grow;
+}

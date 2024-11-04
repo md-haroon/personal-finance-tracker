@@ -1,4 +1,4 @@
-export default function ExpenceForm() {
+export default function ExpenseForm() {
     return (
         <>
             <h1>New Expence</h1>

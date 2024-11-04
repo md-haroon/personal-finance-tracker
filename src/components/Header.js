@@ -5,13 +5,13 @@ export default function Header() {
     return (
         <header>
             <div className="flex">
-                <div class="w-3/12">
+                <div className="w-3/12">
                     <Logo />
                 </div>
-                <div class="grow">
+                <div className="grow">
                     <NavMenu />
                 </div>
-                <div class="w-1/12">03</div>
+                <div className="w-1/12">03</div>
             </div>
         </header>
     );

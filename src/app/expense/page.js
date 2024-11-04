@@ -1,26 +1,29 @@
-import ExpenceForm from "@/app/expense/ExpenceFormComponent";
+import {ExpenseProvider} from "@/app/expense/ExpenseContext";
+import ExpenseForm from "@/app/expense/ExpenseFormComponent";
+import ExpenseList from "@/app/expense/ExpenseListComponent";
+
 
 import "@/app/expense/expense.page.css";
 
 export default function expensePage(params) {
-    return(
-        <>
-        <div className="expence-container">
-            
-            <section className="form-section">
-                <ExpenceForm />
-            </section>
+    return (
+        <ExpenseProvider>
+            <div className="expence-container">
 
-            <div className="details-section">
-                <section className="sumary-cards">
-f
+                <section className="form-section">
+                    <ExpenseForm />
                 </section>
-                <section className="expence-details">
-f
-                </section>
+
+                <div className="details-section">
+                    <section className="sumary-cards">
+                        f
+                    </section>
+                    <section className="expence-details">
+                        <ExpenseList/>
+                    </section>
+                </div>
+
             </div>
-
-        </div>
-        </>
+        </ExpenseProvider>
     )
 }

@@ -20,3 +20,10 @@
 .expence-details{
     @apply border border-slate-300 grow;
 }
+thead tr th{
+    @apply text-center border border-sky-500
+}
+
+tbody tr td{
+    @apply border border-sky-500 pl-3
+}

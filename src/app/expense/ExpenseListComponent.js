@@ -30,7 +30,6 @@ export default function ExpenseList() {
                         </tr>
                     ))
                 }
-
             </tbody>
         </table>
     )

@@ -12,8 +12,10 @@ let initializeData = [{
     "currency" : "SGD"
 }]
 
-const ExpenseProvider = ({children}) => {
 
+
+const ExpenseProvider = ({children}) => {
+    
     const [formData, setFormData] = useState(initializeData);
 
     return(

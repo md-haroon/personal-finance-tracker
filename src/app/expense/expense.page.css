@@ -27,3 +27,8 @@ thead tr th{
 tbody tr td{
     @apply border border-sky-500 pl-3
 }
+
+.inputStyle {
+    border-color: var(--foreground);
+    @apply w-full py-1 mt-9 border-2
+}

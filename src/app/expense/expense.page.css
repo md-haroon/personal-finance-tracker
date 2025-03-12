@@ -32,3 +32,14 @@ tbody tr td{
     border-color: var(--foreground);
     @apply w-full py-1 mt-9 border-2
 }
+
+.card-amt {
+    font-weight: 600;
+    font-size: 2.5em;
+    line-height: 64px;
+}
+
+.card-title {
+    /* color: #6c6c6c; */
+    font-size: 1.18em;
+}

@@ -1,6 +1,8 @@
 import {ExpenseProvider} from "@/app/expense/ExpenseContext";
 import ExpenseForm from "@/app/expense/ExpenseFormComponent";
 import ExpenseList from "@/app/expense/ExpenseListComponent";
+import ExpenseOverview  from "@/app/expense/ExpenseOverviewComponent";
+
 
 
 import "@/app/expense/expense.page.css";
@@ -16,7 +18,7 @@ export default function expensePage(params) {
 
                 <div className="details-section">
                     <section className="sumary-cards">
-                        f
+                        <ExpenseOverview />
                     </section>
                     <section className="expence-details">
                         <ExpenseList/>
